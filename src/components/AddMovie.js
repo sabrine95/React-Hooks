@@ -23,7 +23,6 @@ setNewMovie({...newMovie,[e.target.name]:e.target.value})
             <Button variant="primary" onClick={handleShow}>
                 Add Movie
             </Button>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Add Movie</Modal.Title>
