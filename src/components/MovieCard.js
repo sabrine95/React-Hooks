@@ -1,6 +1,7 @@
 import React from "react";
 import StarRatingComponent from 'react-star-rating-component';
 
+
 const MovieCard = ({movie}) => {
     return (
     <figure className="moviee">
@@ -21,10 +22,8 @@ const MovieCard = ({movie}) => {
         value={movie.rate}
       />
       <p className="movie__detail"><span className="icons icons-grey"><i className="fas fa-clock"></i> </span>1h 33m</p>
-      <p className="movie__detail"><span className="icons icons-yellow"><i className="fas fa-file-invoice-dollar"></i></span> </p>
+      <p className="movie__detail"><span className="icons icons-yellow"><i className="fas fa-file-invoice-dollar">{movie.trailer}</i></span> </p>
       <div className="d-flex justify-content-around">
-        {/* <Button variant="danger" onClick={() => handleDelete(movies.id)}>Delete </Button> */}
-      
       </div>
     </div>
   </div>

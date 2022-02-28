@@ -5,8 +5,6 @@ import 'react-bootstrap';
 import NavBar from "./components/NavBar";
 import AddMovie from "./components//AddMovie";
 import MovieList from "./components/MovieList";
-// import MovieCard from "./components/MovieCard";
-// import ratingStar from 'react-rating-stars-component'
 
 
 function App() {
@@ -66,25 +64,26 @@ function App() {
     trailer: "https://www.youtube.com/embed/4CJ5p4XisHs",
 }])
 
-
     const handleAdd = (newMovie) => {
     setMovies([...movies,newMovie]);
     }
-    // const handleDelete = (id) => {
-    // setMovielist(movielist.filter((movie) => movie.id !== id))
-    //  }
     const getData=(keyword)=>{
     setWord(keyword)
     }
     const dataRate=(rate)=>{
     setRating(rate)
-            }
-return (
-    <div >
-    <NavBar getData={getData} dataRate={dataRate} rating={rating}/>
+    }
+    
+    
+
+return ( 
+    <div>
+    <NavBar getData={getData} dataRate={dataRate} />
     <AddMovie handleAdd={handleAdd} />
     <MovieList movies={movies.filter((movie) => movie.rate>=rating && movie.title.toLowerCase().includes(word.trim().toLowerCase()) )}/>
-    </div>
+   
+</div>
+    
 );
 }
 export default App;
